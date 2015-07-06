@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F4DEED631B495E5C00E7EB08 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4DEED621B495E5C00E7EB08 /* main.cpp */; };
+		F4DEED771B4A688200E7EB08 /* clist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F4DEED751B4A688200E7EB08 /* clist.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,12 @@
 /* Begin PBXFileReference section */
 		F4DEED5F1B495E5C00E7EB08 /* DS_SE */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DS_SE; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4DEED621B495E5C00E7EB08 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		F4DEED6A1B495E6A00E7EB08 /* queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = queue.h; sourceTree = "<group>"; };
+		F4DEED6D1B49602F00E7EB08 /* list.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = list.h; sourceTree = "<group>"; };
+		F4DEED701B49607100E7EB08 /* tree.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = tree.h; sourceTree = "<group>"; };
+		F4DEED731B49627600E7EB08 /* stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = stack.h; sourceTree = "<group>"; };
+		F4DEED751B4A688200E7EB08 /* clist.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = clist.cpp; sourceTree = "<group>"; };
+		F4DEED761B4A688200E7EB08 /* clist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = clist.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +65,12 @@
 			isa = PBXGroup;
 			children = (
 				F4DEED621B495E5C00E7EB08 /* main.cpp */,
+				F4DEED6A1B495E6A00E7EB08 /* queue.h */,
+				F4DEED6D1B49602F00E7EB08 /* list.h */,
+				F4DEED701B49607100E7EB08 /* tree.h */,
+				F4DEED731B49627600E7EB08 /* stack.h */,
+				F4DEED751B4A688200E7EB08 /* clist.cpp */,
+				F4DEED761B4A688200E7EB08 /* clist.h */,
 			);
 			path = DS_SE;
 			sourceTree = "<group>";
@@ -119,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4DEED631B495E5C00E7EB08 /* main.cpp in Sources */,
+				F4DEED771B4A688200E7EB08 /* clist.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
