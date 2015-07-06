@@ -165,13 +165,28 @@ void testChain()
     cout << "Sum chain: " << sumChain(start, end2) << endl;
 }
 
+void testSymmetric()
+{
+    tree<int>* root = 0;
+    
+    insert(5, root);
+    insert(10, root);
+    insert(4, root);
+    insert(0, root);
+    insert(20, root);
+    
+    cout <<"Is symmetric: " << isSymmetric(root);
+}
+
 int main(int argc, const char * argv[]) {
     
     //testTreeListRecursionAndOrdering();
     
     //testJosephus();
     
-    testChain();
+    //testChain();
+    
+    testSymmetric();
     
     return 0;
 }

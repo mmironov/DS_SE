@@ -78,3 +78,31 @@ bool isOrdered(tree<int>* root)
 {
     return check(root, INT_MIN, INT_MAX);
 }
+
+template <typename T>
+bool isReflection(tree<T>* t1, tree<T>* t2)
+{
+    if (!t1 && !t2)
+    {
+        return true;
+    }
+    
+    if (!t1 || !t2)
+    {
+        return false;
+    }
+    
+    return isReflection(t1->left, t2->right) &&
+           isReflection(t1->right, t2->left);
+}
+
+template <typename T>
+bool isSymmetric(tree<T>* root)
+{
+    if (!root)
+    {
+        return true;
+    }
+    
+    return isReflection(root->left, root->right);
+}
