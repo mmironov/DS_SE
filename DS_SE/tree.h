@@ -57,3 +57,24 @@ void print(tree<T>* root)
         print(root->right);
     }
 }
+
+bool check(tree<int>* root, int min, int max)
+{
+    if (!root)
+    {
+        return true;
+    }
+    
+    if (root->value >= min && root->value <= max)
+    {
+        return check(root->left, min, root->value) &&
+        check(root->right, root->value, max);
+    }
+    
+    return false;
+}
+
+bool isOrdered(tree<int>* root)
+{
+    return check(root, INT_MIN, INT_MAX);
+}

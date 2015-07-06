@@ -109,6 +109,8 @@ int main(int argc, const char * argv[]) {
     print(root);
     cout << endl;
     
+    cout << "Is the tree ordered: " << isOrdered(root) << endl;
+    
     tree<int>* list = treeToList(root);
     
     printAsList(list);
