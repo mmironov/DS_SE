@@ -178,6 +178,56 @@ void testSymmetric()
     cout <<"Is symmetric: " << isSymmetric(root);
 }
 
+int find(int a[], int start, int end)
+{
+    if (start == end)
+    {
+        return start;
+    }
+    
+    if (start == end -1)
+    {
+        if (a[start] > a[end])
+        {
+            return start;
+        }
+        else
+        {
+            return end;
+        }
+    }
+    
+    int mid = (start + end) / 2;
+    
+    if (a[mid - 1] < a[mid] && a[mid] > a[mid+1])
+    {
+        return mid;
+    }
+    else if (a[mid-1] < a[mid] && a[mid] < a[mid+1])
+    {
+        return find(a, mid+1, end);
+    }
+    else
+    {
+        return find(a, start, mid-1);
+    }
+}
+
+//return the index of the peak
+int findPeak(int a[], int n)
+{
+    return find(a, 0, n-1);
+}
+
+void testPeak()
+{
+    int a[] = {1, 5, 10, 15, 20, 25, 16};
+    
+    int peak = findPeak(a, 7);
+    
+    cout << "The peak is: " << a[peak] << endl;
+}
+
 int main(int argc, const char * argv[]) {
     
     //testTreeListRecursionAndOrdering();
@@ -186,7 +236,9 @@ int main(int argc, const char * argv[]) {
     
     //testChain();
     
-    testSymmetric();
+    //testSymmetric();
+    
+    testPeak();
     
     return 0;
 }
