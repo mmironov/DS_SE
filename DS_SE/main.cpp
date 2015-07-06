@@ -10,6 +10,7 @@
 #include "queue.h"
 #include "clist.h"
 #include "tree.h"
+#include "list.h"
 using namespace std;
 
 void makeCircular(tree<int>* root)
@@ -97,8 +98,8 @@ int solve(Buffer<int> circle, int k)
     return circle.front();
 }
 
-int main(int argc, const char * argv[]) {
-    
+void testTreeListRecursionAndOrdering()
+{
     tree<int>* root = 0;
     
     insert(5, root);
@@ -107,6 +108,7 @@ int main(int argc, const char * argv[]) {
     insert(0, root);
     
     print(root);
+    
     cout << endl;
     
     cout << "Is the tree ordered: " << isOrdered(root) << endl;
@@ -116,7 +118,10 @@ int main(int argc, const char * argv[]) {
     printAsList(list);
     
     cout << endl;
-    
+}
+
+void testJosephus()
+{
     Buffer<int> circle;
     for(int i=1; i <= 9; ++i)
     {
@@ -126,6 +131,47 @@ int main(int argc, const char * argv[]) {
     int k = 4;
     
     cout << "Solved: " << solve(circle, k) << endl;
+}
+
+void testChain()
+{
+    list<int>* start = 0;
+    list<int>* end = 0;
+    
+    for(int i=1; i <= 5; ++i) {
+        add(i, start, end);
+    }
+    
+    list<int>* start2 = 0;
+    list<int>* end2 = 0;
+    
+    for(int i=1; i <= 5; ++i) {
+        
+        if (i==3)
+        {
+            add(i, start2, end2);
+        }
+        else
+        {
+            add(i*10, start2, end2);
+        }
+    }
+    
+    join(start, end, start2, end2);
+    
+    print(start);
+    cout << endl;
+    cout << "Is a chain?: " << isJoined(start, end2) << endl;
+    cout << "Sum chain: " << sumChain(start, end2) << endl;
+}
+
+int main(int argc, const char * argv[]) {
+    
+    //testTreeListRecursionAndOrdering();
+    
+    //testJosephus();
+    
+    testChain();
     
     return 0;
 }
